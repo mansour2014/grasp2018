@@ -18,7 +18,7 @@
 # --------------------------------------------------------------------------------------
 export   FC=ifort                       # Fortran compiler 
 export   FC_FLAGS="-O2 -save "          # Serial code compiler flags
-#export  FC_FLAGS="-O0 -check all"      # Options for check for runtime errors
+#export  FC_FLAGS="-O0 -check all"      # Options used to check for runtime errors
 export   FC_LD="-mkl=sequential"        # Serial linker flags
 export   LAPACK_LIB=" "                 # Library to be searched (not needed for ifort)
 export   GRASP="${PWD}"                 # Location of the grasp2k root directory
@@ -27,6 +27,7 @@ export   GRASP="${PWD}"                 # Location of the grasp2k root directory
 # --------------------------------------------------------------------------------------
 export   FC_MPI="mpifort"               # MPI
 export   FC_MPIFLAGS="${FC_FLAGS}"      # Parallel code compiler flags
-export   FC_MPILD="-mkl=sequential"     # Serical linker flags
+export   FC_MPILD="-mkl=sequential"     # Serial linker flags
 # --------------------------------------------------------------------------------------
-export MPI_TMP="/scratch/cff/case1"               # Location of directory for temporary files
+export   MPI_TMP="$HOME/mpi_tmp"        # Location of directory for temporary files
+
